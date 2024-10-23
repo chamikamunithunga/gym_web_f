@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Zone</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body data-vide-bg="img/signup.jpg">
+    <div class="loginBox">
+        <div class="glass">
+            <img src="img/logo/logo.png" alt="Logo" class="logo">
+            <h2> Login here </h2>
+            <h3 class="h3">Login with your Email and Password</h3>
+            <form id="login_form">
+            
+                <div class="inputBox">
+                    <input type="email" name="email" placeholder=" Email" id="email">
+                    <span><i class="fa fa-envelope"></i></span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" placeholder="Password" id="password">
+                    <span><i class="fa fa-lock"></i></span>
+                </div>
+               
+                <input type="submit" name="" value="Login">
+            </form>
+
+            <h2 class="a">forgotten password?<a href="PHP/forgottenPassword.php">Click here </a></h2>
+            <h3 class="h3">OR, Login with </h3>
+            
+                <div class="social-buttons">
+                    <button class="social-button google-button">
+                        <img src="img/logo/icon.png" alt="Google Logo">
+                        Login in with Google
+                    </button>
+                    <button class="social-button facebook-button">
+                        <img src="img/logo/icon2.png" alt="Facebook Logo">
+                        Login in with Facebook
+                    </button>
+                </div>
+                <h2 class="a">Don't have an Account? <a href="signup.html">Signup Now</a></h2>
+        </div>
+        
+            <a href="index.html" class="back-button">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
+             
+    </div>
+    
+    <div id="toastBox" class="toastBox"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/jquery.vide.js"></script>
+    <script src="js/loginuser.js"></script>
+    <script src="https://kit.fontawesome.com/725fc9de50.js" crossorigin="anonymous"></script>
+</body>
+</html>

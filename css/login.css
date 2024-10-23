@@ -1,0 +1,439 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	font-family: sans-serif;
+}
+
+.loginBox {
+	position: relative;
+	width: 90%;
+	max-width: 700px;
+	max-height: 90%;
+	box-sizing: border-box;
+	background: transparent;
+	box-shadow: 0 10px 20px #00000000;
+	border-radius: 10px;
+	text-align: center;
+	overflow: hidden; 
+	padding: 20px;
+}
+
+.back-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 20px;
+	background: #353210;
+	border: 1px solid #d7c928;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #ffea00;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back-button:hover {
+	background: #ffea00;
+	color: #000;
+}
+
+.glass {
+	width: 100%;
+	height: 100%;
+	padding: 50px; 
+	box-sizing: border-box;
+	background: #00000098;
+	border-radius: 5px;
+
+	position: relative;
+	overflow-y: auto; 
+}
+
+.logo {
+	width: 100%;
+	max-width: 300px; 
+	display: block;
+	margin: 0 auto 20px; 
+	height: auto;
+}
+
+h2 {
+	margin: 0;
+	padding: 0 0 10px; 
+	color: #ffffff;
+	text-align: center;
+	font-family: 'bold';
+}
+h3{
+	color: #ffffff;
+}
+.loginBox input {
+	width: 100%;
+	margin-bottom: 10px; 
+	position: relative;
+	border: none;
+	border-bottom: 2px solid #ffffff;
+	outline: none;
+	height: 35px;
+	color: #ffffff;
+	background: transparent;
+	font-size: 14px;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+
+
+::placeholder {
+	color: #ffffff;
+}
+
+.inputBox {
+	position: relative;
+}
+
+.inputBox span {
+	position: absolute;
+	top: 8px;
+	color: #ffea00;
+	left: 0;
+}
+
+.loginBox input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 35px;
+	font-size: 20px;
+	background: #000000;
+	color: #ffea00;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-weight: bold;
+}
+
+.loginBox input[type="submit"]:hover {
+	background: #ffea00;
+	color: #000000;
+	transform: scale(1.0);
+	transition: 0.5s;
+}
+
+.loginBox .a {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: lighter;
+	text-decoration: none;
+	display: block;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.loginBox h5 {
+	margin: 0;
+	padding: 10px 0 0 0;
+	text-align: center;
+	color: #ffffff;
+}
+
+.loginBox h2 {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 30px; 
+    line-height: 1.2; 
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.loginBox h2 a {
+	text-decoration: none;
+	color: #fdfdfd;
+	
+}
+
+
+
+.social-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.social-button {
+	border: none;
+	padding: 5px;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 48%; 
+	transition: 0.5s;
+}
+
+.social-button:hover {
+	background-color: #ebbd06;
+	transform: scale(1.05);
+	color: #fff;
+	transition: 0.5s;
+}
+
+.google-button {
+	background-color: #4285F4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.facebook-button {
+	background-color: #3b5998;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-button img {
+	width: 30px; 
+	margin-right: 10px; 
+}
+
+@media (max-width: 768px) {
+	.loginBox {
+		width: 95%;
+		max-width: 95%;
+		height: auto;
+		padding: 20px;
+	}
+	.social-buttons {
+		flex-direction: column;
+	}
+	.social-button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.social-button:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+.offcanvas-menu-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 999;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+}
+
+.offcanvas-menu-overlay.active {
+	visibility: visible;
+}
+
+.canvas-open {
+	position: absolute;
+	right: 40px;
+	top: 61px;
+	font-size: 22px;
+	width: 30px;
+	height: 30px;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 2px;
+	line-height: 29px;
+	text-align: center;
+	z-index: 1;
+	display: block;
+	cursor: pointer;
+}
+
+.offcanvas-menu-wrapper {
+	position: fixed;
+	left: -300px;
+	top: 0;
+	width: 300px;
+	z-index: 999;
+	background: #ffffff;
+	overflow-y: auto;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	padding: 50px 30px 30px 30px;
+	display: block;
+}
+
+.offcanvas-menu-wrapper.show-offcanvas-menu-wrapper {
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+.offcanvas-menu-wrapper .canvas-close {
+	font-size: 22px;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #151515;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 27px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+
+
+/*   social media icons */
+
+ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+ul li {
+	list-style: none;
+	margin: 0 10px; 
+}
+
+ul li a {
+	position: relative;
+	display: block;
+	width: 50px; 
+	height: 50px; 
+	background: transparent;
+	text-align: center;
+	line-height: 50px; 
+	border-radius: 50%; 
+	transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+ul li a .fa {
+	font-size: 24px; 
+	color: #000000; 
+	line-height: 50px;
+}
+
+
+ul li a.facebook-icon .fa {
+	color: #0051ff; 
+}
+
+ul li a.instagram-icon .fa {
+	color: #ff0055; 
+}
+
+ul li a.whatsapp-icon .fa {
+	color: #00ff5e; 
+}
+
+
+ul li a:hover {
+	background-color: #000000c8;
+	box-shadow: 0 0 10px #0000004d; 
+}
+
+
+ul li a {
+	text-decoration: none;
+}
+
+
+/*  "Already have an account?"  */
+.a {
+    font-size: 34px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}
+
+ a {
+    color: #141310;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+/*Toster msg*/
+.toastBox{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	padding: 10px;
+	border-radius: 10px;
+  }
+  .toast{
+	width: 400px;
+	height: 60px;
+	background-color:rgba(255, 255, 255, 0.79);
+	font-weight: 500;
+	margin: 15px 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	position: relative;
+	transform: translateX(100%);
+	animation: moveleft 0.5s linear forwards;
+	
+  }
+  @keyframes moveleft{
+	100%{
+		transform:translateX(0) ;
+	}
+  }
+  .toast i{
+	margin: 0 20px;
+	font-size: 35px;
+	color: green;
+  }
+  .toast.error i{
+	color: rgb(255, 3, 3);
+  }
+  .toast.Invalid i{
+	color: #ffea00;
+  }
+  .toast::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background: green;
+	animation: anim 5s linear forwards;
+	
+  }
+  
+  @keyframes anim {
+	100%{
+		width: 0;
+	}
+  }
+  .toast.error::after{
+	background-color: red;
+  }
+  .toast.Invalid::after{
+	background-color: #ffea00;
+  }
+
+  /*Toster msg*/
